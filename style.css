@@ -130,6 +130,10 @@ body {
   background-color: #4a6686;
 }
 
+.panel .round-btn-wrapper {
+  margin-top: 10vh;
+}
+
 .round-btn-wrapper {
   display: flex;
   align-items: center;
@@ -152,6 +156,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: -13vh;
+  overflow: hidden;
 }
 
 .shadow {
