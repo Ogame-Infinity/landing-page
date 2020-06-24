@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Ogame Infinty</title>
+    <meta name="description" content="Ogame Infinty" />
+    <link rel="icon" href="res/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="background">
+        <div class="stars small"></div>
+        <div class="stars medium"></div>
+        <div class="stars large"></div>
+      </div>
+      <div class="header">
+        <img src="res/logo.svg" alt="Ogame Infinity" />
+        <div class="download">
+          Coming soon
+        </div>
+      </div>
+      <div class="title">
+        To Ogame's infinity <br />
+        and beyond !
+      </div>
+      <div class="footer">
+        <p>
+          Take control of your Ogame account
+        </p>
+
+        <div class="footer-text">
+          Made confined, for fun, and with
+          <svg width="10" height="10" viewBox="0 0 24 24" class="heart-icon">
+            <path
+              style="fill: #c80909;"
+              d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"
+            />
+          </svg>
+          in Paris
+        </div>
+      </div>
+    </div>
+
+    <div class="page oglight">
+      <div class="background">
+        <div class="stars small"></div>
+        <div class="stars medium"></div>
+        <div class="stars large"></div>
+      </div>
+      <div class="wrapper">
+        <div class="image"><img src="res/overview.png" class="big" /></div>
+        <div class="shadow" style="width: 90vh;">
+          <div class="border"></div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="round-btn-wrapper">
+          <div class="round-btn active" onclick="showImage(this, 'oglight', 'overview')"></div>
+          <div class="round-btn" onclick="showImage(this, 'oglight', 'building')"></div>
+          <div class="round-btn" onclick="showImage(this, 'oglight', 'galaxy')"></div>
+        </div>
+        <h1>Welcome to OGame Infinty</h1>
+        <p style="color: white; width: 100%; text-align: center; padding: 10c;">
+          Build around OGlight, you can expect a lot of suprises.
+        </p>
+      </div>
+    </div>
+
+    <div class="page panel">
+      <div class="background">
+        <div class="stars small"></div>
+        <div class="stars medium"></div>
+        <div class="stars large"></div>
+      </div>
+      <div class="wrapper">
+        <div class="image">
+          <img src="res/panel.png" class="big" />
+        </div>
+        <div class="shadow" style="width: 70vh;">
+          <div class="border"></div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="round-btn-wrapper"></div>
+        <h1>Versatile control panel</h1>
+
+        <p>
+          PLanet list, player search, target list, empire view, statitics... <br />
+          Eveything just one click away.
+          <small>* Detailed planet list only avaible with the commander officers</small>
+        </p>
+      </div>
+    </div>
+
+    <div class="page statitics">
+      <div class="background">
+        <div class="stars small"></div>
+        <div class="stars medium"></div>
+        <div class="stars large"></div>
+      </div>
+      <div class="wrapper">
+        <div class="image">
+          <img src="res/general.png" />
+        </div>
+        <div class="shadow" style="width: 100vh;">
+          <div class="border"></div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="round-btn-wrapper">
+          <div class="round-btn active" onclick="showImage(this, 'statitics', 'general')"></div>
+          <div class="round-btn" onclick="showImage(this, 'statitics', 'expeditions')"></div>
+          <div class="round-btn" onclick="showImage(this, 'statitics', 'combats')"></div>
+        </div>
+        <h1>Full set of statitics</h1>
+        <p>
+          Enjoy the overview of your account,
+          <br />
+          browse your latest combat or expedition results.
+        </p>
+      </div>
+    </div>
+
+    <div class="page empire">
+      <div class="background">
+        <div class="stars small"></div>
+        <div class="stars medium"></div>
+        <div class="stars large"></div>
+      </div>
+      <div class="wrapper">
+        <div class="image">
+          <img src="res/fleet.png" />
+        </div>
+        <div class="shadow" style="width: 100vh;">
+          <div class="border"></div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="round-btn-wrapper">
+          <div class="round-btn active" onclick="showImage(this, 'empire', 'fleet')"></div>
+          <div class="round-btn" onclick="showImage(this, 'empire', 'mines')"></div>
+          <div class="round-btn" onclick="showImage(this, 'empire', 'defense')"></div>
+        </div>
+        <h1>Improved empire visuals</h1>
+        <p style="color: white; width: 100%; text-align: center; padding: 10c;">
+          Never loose track of your fleet, defense or mines production... <br />
+          <small>* Only avaible with the commander officers</small>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    let SCREENS = {
+      general: "general.png",
+      expeditions: "expeditions.png",
+      combats: "combats.png",
+      fleet: "",
+    };
+    function showImage(target, selector, name) {
+      Array.from(target.parentElement.children).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+      target.classList.add("active");
+      document.querySelector(`.${selector} img`).src = "res/" + name + ".png";
+    }
+  </script>
+</html>
