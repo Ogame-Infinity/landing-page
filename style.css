@@ -3,60 +3,6 @@
   src: url("Sterilict.ttf");
 }
 
-.bg-overview {
-  width: 2022px;
-  height: 1312px;
-  background: url("res/overview-sprite.png") -10px -10px;
-}
-
-.bg-building {
-  width: 2022px;
-  height: 1312px;
-  background: url("res/overview-sprite.png") -2052px -10px;
-}
-
-.bg-fleetdispatch {
-  width: 2022px;
-  height: 1312px;
-  background: url("res/overview-sprite.png") -10px -1342px;
-}
-
-.bg-galaxy {
-  width: 2022px;
-  height: 1312px;
-  background: url("res/overview-sprite.png") -2052px -1342px;
-}
-
-.bg-general {
-  width: 2000px;
-  height: 1104px;
-  background: url("css_sprites.png") -2030px -10px;
-}
-
-.bg-expeditions {
-  width: 2000px;
-  height: 1131px;
-  background: url("css_sprites.png") -10px -10px;
-}
-
-.bg-combats {
-  width: 2000px;
-  height: 1080px;
-  background: url("css_sprites.png") -10px -1161px;
-}
-
-.bg-fleet {
-  width: 2125px;
-  height: 1167px;
-  background: url("css_sprites.png") -10px -10px;
-}
-
-.bg-mines {
-  width: 2103px;
-  height: 1146px;
-  background: url("css_sprites.png") -2155px -10px;
-}
-
 a {
   text-decoration: none;
 }
@@ -294,7 +240,7 @@ body {
 }
 
 .download {
-  border: solid 2px #4a6686;
+  border: solid 3px #4a6686;
   border-radius: 10px;
   font-size: 17px;
   color: white;
