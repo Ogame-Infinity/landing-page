@@ -5,11 +5,24 @@
     <meta charset="utf-8" />
 
     <title>Ogame Infinity</title>
-    <meta name="description" content="Ogame Infinity" />
+    <meta name="title" content="Meta Tags — Preview, Edit and Generate" />
+    <meta name="description" content="Ogame Infinity - The new Ogame add-on!" />
     <link rel="icon" href="res/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <meta property="og:title" content="Ogame Infinty" />
+    <meta property="og:image" content="https://ogameinfinity.com/res/logo.svg" />
+    <meta property="og:description" content="The new Ogame add-on!" />
+    <meta property="og:url" content="https://ogameinfinity.com/page.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" href="res/building.png" as="image" />
+    <link rel="preload" href="res/fleetdispatch.png" as="image" />
+    <link rel="preload" href="res/galaxy.png" as="image" />
+    <link rel="preload" href="res/mines.png" as="image" />
+    <link rel="preload" href="res/expeditions.png" as="image" />
+    <link rel="preload" href="res/combats.png" as="image" />
   </head>
-  <body>
+  <body class="snapping">
     <div class="page">
       <div class="background">
         <div class="stars small"></div>
@@ -19,7 +32,7 @@
       <div class="header">
         <img src="res/logo.svg" alt="Ogame Infinity" />
         <div class="download">
-          Coming soon
+          The new Ogame add-on
         </div>
       </div>
       <div class="title">
@@ -27,12 +40,31 @@
         and beyond !
       </div>
       <div class="footer">
-        <p>
-          Take control of your Ogame account
-        </p>
+        <div class="downloads">
+          <div class="download-wrapper">
+            <img src="res/chrome.svg" width="60px" height="60px" alt="Chrome logo" />
+            <a
+              href="https://chrome.google.com/webstore/detail/ogame-infinity/hfojakphgokgpbnejoobfamojbgolcbo"
+              class="download"
+              >Download
+            </a>
+          </div>
+          <div class="download-wrapper">
+            <img src="res/firefox.svg" width="70px" height="63px" alt="Firefox logo" />
+            <span class="download">
+              Very soon
+            </span>
+          </div>
+          <div class="download-wrapper">
+            <img src="res/edge.svg" width="65px" height="70px" alt="Edge logo" />
+            <span class="download">
+              Very soon
+            </span>
+          </div>
+        </div>
 
         <div class="footer-text">
-          Made confined, for fun, and with
+          Made isolated with
           <svg width="10" height="10" viewBox="0 0 24 24" class="heart-icon">
             <path
               style="fill: #c80909;"
@@ -44,7 +76,7 @@
       </div>
     </div>
 
-    <div class="page oglight">
+    <div class="page big oglight">
       <div class="background">
         <div class="stars small"></div>
         <div class="stars medium"></div>
@@ -52,7 +84,7 @@
       </div>
       <div class="wrapper">
         <div class="image"><img src="res/overview.png" class="big" /></div>
-        <div class="shadow" style="width: 90vh;">
+        <div class="shadow" style="width: 110vh;">
           <div class="border"></div>
           <div class="overlay"></div>
         </div>
@@ -60,18 +92,22 @@
 
       <div class="text-block">
         <div class="round-btn-wrapper">
-          <div class="round-btn active" onclick="showImage(this, 'oglight', 'overview')"></div>
-          <div class="round-btn" onclick="showImage(this, 'oglight', 'building')"></div>
-          <div class="round-btn" onclick="showImage(this, 'oglight', 'galaxy')"></div>
+          <img
+            class="arrow"
+            src="res/left.svg"
+            style="filter: grayscale(1);"
+            onclick="showImage(this, 'oglight', true)"
+          />
+          <img class="arrow" src="res/right.svg" onclick="showImage(this, 'oglight', false)" />
         </div>
-        <h1>Welcome to OGame Infinty</h1>
+        <h1>The complete add-on for Ogame</h1>
         <p style="color: white; width: 100%; text-align: center; padding: 10c;">
           Build around OGlight, you can expect a lot of suprises.
         </p>
       </div>
     </div>
 
-    <div class="page panel">
+    <div class="page big panel">
       <div class="background">
         <div class="stars small"></div>
         <div class="stars medium"></div>
@@ -81,7 +117,7 @@
         <div class="image">
           <img src="res/panel.png" class="big" />
         </div>
-        <div class="shadow" style="width: 70vh;">
+        <div class="shadow" style="width: 90vh;">
           <div class="border"></div>
           <div class="overlay"></div>
         </div>
@@ -92,14 +128,14 @@
         <h1>Versatile control panel</h1>
 
         <p>
-          PLanet list, player search, target list, empire view, statitics... <br />
-          Eveything just one click away.
+          PLanet list, player search, target list, empire view, statistics... <br />
+          Everything just one click away.
           <small>* Detailed planet list only avaible with the commander officers</small>
         </p>
       </div>
     </div>
 
-    <div class="page statitics">
+    <div class="page statistics">
       <div class="background">
         <div class="stars small"></div>
         <div class="stars medium"></div>
@@ -117,11 +153,15 @@
 
       <div class="text-block">
         <div class="round-btn-wrapper">
-          <div class="round-btn active" onclick="showImage(this, 'statitics', 'general')"></div>
-          <div class="round-btn" onclick="showImage(this, 'statitics', 'expeditions')"></div>
-          <div class="round-btn" onclick="showImage(this, 'statitics', 'combats')"></div>
+          <img
+            class="arrow"
+            src="res/left.svg"
+            style="filter: grayscale(1);"
+            onclick="showImage(this, 'statistics', true)"
+          />
+          <img class="arrow" src="res/right.svg" onclick="showImage(this, 'statistics', false)" />
         </div>
-        <h1>Full set of statitics</h1>
+        <h1>Full set of statistics</h1>
         <p>
           Enjoy the overview of your account,
           <br />
@@ -131,11 +171,6 @@
     </div>
 
     <div class="page empire">
-      <div class="background">
-        <div class="stars small"></div>
-        <div class="stars medium"></div>
-        <div class="stars large"></div>
-      </div>
       <div class="wrapper">
         <div class="image">
           <img src="res/fleet.png" />
@@ -148,31 +183,64 @@
 
       <div class="text-block">
         <div class="round-btn-wrapper">
-          <div class="round-btn active" onclick="showImage(this, 'empire', 'fleet')"></div>
-          <div class="round-btn" onclick="showImage(this, 'empire', 'mines')"></div>
-          <div class="round-btn" onclick="showImage(this, 'empire', 'defense')"></div>
+          <img
+            class="arrow"
+            src="res/left.svg"
+            style="filter: grayscale(1);"
+            onclick="showImage(this, 'empire', true)"
+          />
+          <img class="arrow" src="res/right.svg" onclick="showImage(this, 'empire', false)" />
         </div>
         <h1>Improved empire visuals</h1>
-        <p style="color: white; width: 100%; text-align: center; padding: 10c;">
+        <p>
           Never loose track of your fleet, defense or mines production... <br />
           <small>* Only avaible with the commander officers</small>
         </p>
       </div>
     </div>
   </body>
+
   <script>
     let SCREENS = {
-      general: "general.png",
-      expeditions: "expeditions.png",
-      combats: "combats.png",
-      fleet: "",
+      oglight: ["overview", "building", "fleetdispatch", "galaxy"],
+      statistics: ["general", "expeditions", "combats"],
+      empire: ["fleet", "mines"],
     };
-    function showImage(target, selector, name) {
-      Array.from(target.parentElement.children).forEach((elem) => {
-        elem.classList.remove("active");
-      });
-      target.classList.add("active");
-      document.querySelector(`.${selector} img`).src = "res/" + name + ".png";
+
+    let index = {
+      oglight: 0,
+      statistics: 0,
+      empire: 0,
+    };
+
+    var lastScrollTop = 0;
+
+    let interval;
+    let waiting = false;
+
+    let sindex = 0;
+
+    function showImage(target, selector, left) {
+      if (left) {
+        if (index[selector] == 1) {
+          document.querySelector(`.${selector} .arrow`).style.filter = "grayscale(1)";
+        }
+        if (index[selector] == 0) {
+          return;
+        }
+        index[selector]--;
+        document.querySelector(`.${selector} .arrow:last-child`).style.filter = "none";
+      } else {
+        if (index[selector] == SCREENS[selector].length - 2) {
+          document.querySelector(`.${selector} .arrow:last-child`).style.filter = "grayscale(1)";
+        } else if (index[selector] == SCREENS[selector].length - 1) {
+          return;
+        }
+        index[selector]++;
+        document.querySelector(`.${selector} .arrow`).style.filter = "none";
+      }
+
+      document.querySelector(`.${selector} img`).src = "res/" + SCREENS[selector][index[selector]] + ".png";
     }
   </script>
 </html>

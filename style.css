@@ -3,12 +3,78 @@
   src: url("Sterilict.ttf");
 }
 
+.bg-overview {
+  width: 2022px;
+  height: 1312px;
+  background: url("res/overview-sprite.png") -10px -10px;
+}
+
+.bg-building {
+  width: 2022px;
+  height: 1312px;
+  background: url("res/overview-sprite.png") -2052px -10px;
+}
+
+.bg-fleetdispatch {
+  width: 2022px;
+  height: 1312px;
+  background: url("res/overview-sprite.png") -10px -1342px;
+}
+
+.bg-galaxy {
+  width: 2022px;
+  height: 1312px;
+  background: url("res/overview-sprite.png") -2052px -1342px;
+}
+
+.bg-general {
+  width: 2000px;
+  height: 1104px;
+  background: url("css_sprites.png") -2030px -10px;
+}
+
+.bg-expeditions {
+  width: 2000px;
+  height: 1131px;
+  background: url("css_sprites.png") -10px -10px;
+}
+
+.bg-combats {
+  width: 2000px;
+  height: 1080px;
+  background: url("css_sprites.png") -10px -1161px;
+}
+
+.bg-fleet {
+  width: 2125px;
+  height: 1167px;
+  background: url("css_sprites.png") -10px -10px;
+}
+
+.bg-mines {
+  width: 2103px;
+  height: 1146px;
+  background: url("css_sprites.png") -2155px -10px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .page {
   scroll-snap-align: start;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 10vh;
+}
+.page:first-of-type {
+  margin-top: 0;
+}
+
+.page.big {
+  margin-top: 25vh;
 }
 
 .image {
@@ -26,7 +92,7 @@
 
 .image img.big {
   width: auto;
-  height: 55vh;
+  height: 65vh;
 }
 
 .text-block {
@@ -79,7 +145,7 @@
   font-size: 1vh;
 }
 
-img {
+.header img {
   width: 220px;
 }
 html,
@@ -91,13 +157,17 @@ body {
   font-family: "Sterilict";
   letter-spacing: 2px;
   background: #1a2028;
-  scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
-  overscroll-behavior-y: none;
-  scroll-snap-stop: always;
 }
 * {
   z-index: 1;
+  scroll-behavior: smooth;
+}
+
+.scrollwrapper {
+  /* scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+  overscroll-behavior-y: none;
+  scroll-snap-stop: always; */
 }
 
 .title {
@@ -180,26 +250,53 @@ body {
   );
 }
 
+.arrow {
+  width: 50px;
+  height: 20px;
+}
+
+.arrow:hover {
+  width: 50px;
+  height: 25px;
+}
+
 .shadow .overlay {
   position: absolute;
   width: 100%;
-  height: 55px;
+  height: 25px;
   background: #1a2027;
   margin: 0 auto;
   left: 0;
 }
 .background {
-  background: radial-gradient(ellipse at bottom, #000 0%, #1a2027 70%, #1a2027 100%);
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  background: radial-gradient(ellipse, #000 0%, #1a2027 70%, #1a2027 100%);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
   z-index: 0;
+  /* transform: translatez(0); */
+}
+
+.downloads {
+  display: flex;
+  justify-content: space-between;
+}
+
+.download-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+  margin-bottom: 30px;
 }
 
 .download {
-  border: solid 5px #4a6686;
+  border: solid 2px #4a6686;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 17px;
   color: white;
   height: min-content;
   padding: 10px;
@@ -209,6 +306,7 @@ body {
 .download:hover {
   background-color: #4a6686;
   color: #171d23;
+  font-weight: 800;
 }
 
 .heart-icon {
