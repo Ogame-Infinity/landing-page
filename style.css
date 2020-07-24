@@ -248,10 +248,12 @@ body {
   cursor: pointer;
 }
 
-.download:hover {
+.download:not(:first-of-type):hover {
   background-color: #4a6686;
   color: #171d23;
   font-weight: 800;
+}
+.download:first-of-type:hover {
 }
 
 .heart-icon {
