@@ -248,12 +248,16 @@ body {
   cursor: pointer;
 }
 
-.download:not(:first-of-type):hover {
+.download:hover {
   background-color: #4a6686;
   color: #171d23;
   font-weight: 800;
 }
-.download:first-of-type:hover {
+.header > .download {
+  background-color: inherit;
+  color: white;
+  font-weight: 800;
+  cursor: default;
 }
 
 .heart-icon {
