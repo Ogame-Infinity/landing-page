@@ -64,14 +64,19 @@
         </div>
 
         <div class="footer-text">
-          Made isolated with
-          <svg width="10" height="10" viewBox="0 0 24 24" class="heart-icon">
-            <path
-              style="fill: #c80909;"
-              d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"
-            />
-          </svg>
-          in Paris
+          <span>
+            Made isolated with
+            <svg width="10" height="10" viewBox="0 0 24 24" class="heart-icon">
+              <path
+                style="fill: #c80909;"
+                d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"
+              />
+            </svg>
+            in Paris
+          </span>
+          <span class="privacy">
+            Privacy policy
+          </span>
         </div>
       </div>
     </div>
@@ -198,9 +203,42 @@
         </p>
       </div>
     </div>
+    <div class="dialog-overlay">
+      <div class="dialog">
+        <h1>The universe's best privacy policiy!</h1>
+        <br />
+        <p>
+          We don't store your data, period.
+          <br />
+          No data collection, no analytics... No nothing.
+        </p>
+      </div>
+    </div>
   </body>
 
   <script>
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.has("privacy")) {
+      document.querySelector(".dialog-overlay").classList.add("active");
+    }
+
+    document.querySelector(".privacy").addEventListener("click", (e) => {
+      document.querySelector(".dialog-overlay").classList.add("active");
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    document.querySelector("body").addEventListener("click", () => {
+      document.querySelector(".dialog-overlay").classList.remove("active");
+    });
+
+    document.querySelector("body").addEventListener("keyup", function (event) {
+      if (event.keyCode === 13 || event.keyCode === 32 || event.keyCode === 27) {
+        document.querySelector(".dialog-overlay").classList.remove("active");
+      }
+    });
+
     let SCREENS = {
       oglight: ["overview", "building", "fleetdispatch", "galaxy"],
       statistics: ["general", "expeditions", "combats"],
