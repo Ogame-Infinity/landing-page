@@ -10,7 +10,10 @@
     <link rel="icon" href="res/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <meta property="og:title" content="Ogame Infinty" />
-    <meta property="og:image" content="https://ogameinfinity.com/res/logo.svg" />
+    <meta
+      property="og:image"
+      content="https://ogameinfinity.com/res/logo.svg"
+    />
     <meta property="og:description" content="The new Ogame add-on!" />
     <meta property="og:url" content="https://ogameinfinity.com/page.html" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -42,19 +45,37 @@
       <div class="footer">
         <div class="downloads">
           <div class="download-wrapper">
-            <img src="res/chrome.svg" width="60px" height="60px" alt="Chrome logo" />
-            <a href="" class="download">
-              Very soon
+            <img
+              src="res/chrome.svg"
+              width="60px"
+              height="60px"
+              alt="Chrome logo"
+            />
+            <a
+              href="https://chrome.google.com/webstore/detail/ogame-infinity/hfojakphgokgpbnejoobfamojbgolcbo"
+              class="download"
+            >
+              Download
             </a>
           </div>
           <div class="download-wrapper">
-            <img src="res/firefox.svg" width="70px" height="63px" alt="Firefox logo" />
+            <img
+              src="res/firefox.svg"
+              width="70px"
+              height="63px"
+              alt="Firefox logo"
+            />
             <span class="download">
               Very soon
             </span>
           </div>
           <div class="download-wrapper">
-            <img src="res/edge.svg" width="65px" height="70px" alt="Edge logo" />
+            <img
+              src="res/edge.svg"
+              width="65px"
+              height="70px"
+              alt="Edge logo"
+            />
             <span class="download">
               Very soon
             </span>
@@ -67,7 +88,7 @@
               Support/Discord
             </a>
           </span>
-          <span>
+          <span class="isolated">
             Made isolated with
             <svg width="10" height="10" viewBox="0 0 24 24" class="heart-icon">
               <path
@@ -106,11 +127,16 @@
             style="filter: grayscale(1);"
             onclick="showImage(this, 'oglight', true)"
           />
-          <img class="arrow" src="res/right.svg" onclick="showImage(this, 'oglight', false)" />
+          <img
+            class="arrow"
+            src="res/right.svg"
+            onclick="showImage(this, 'oglight', false)"
+          />
         </div>
         <h1>The complete add-on for Ogame</h1>
-        <p style="color: white; width: 100%; text-align: center; padding: 10c;">
+        <p>
           Build around OGlight, you can expect a lot of surprises.
+          <small>* Thank you Mr. NullNan for the initial work!</small>
         </p>
       </div>
     </div>
@@ -123,7 +149,7 @@
       </div>
       <div class="wrapper">
         <div class="image">
-          <img src="res/panel.png" class="big" />
+          <img src="res/panel.png" class="panel" />
         </div>
         <div class="shadow" style="width: 90vh;">
           <div class="border"></div>
@@ -136,9 +162,13 @@
         <h1>Versatile control panel</h1>
 
         <p>
-          PLanet list, player search, target list, empire view, statistics... <br />
+          PLanet list, player search, target list, empire view, statistics...
+          <br />
           Everything just one click away.
-          <small>* Detailed planet list only available with the commander officer</small>
+          <small
+            >* Detailed planet list only available with the commander
+            officer</small
+          >
         </p>
       </div>
     </div>
@@ -167,7 +197,11 @@
             style="filter: grayscale(1);"
             onclick="showImage(this, 'statistics', true)"
           />
-          <img class="arrow" src="res/right.svg" onclick="showImage(this, 'statistics', false)" />
+          <img
+            class="arrow"
+            src="res/right.svg"
+            onclick="showImage(this, 'statistics', false)"
+          />
         </div>
         <h1>Full set of statistics</h1>
         <p>
@@ -197,7 +231,11 @@
             style="filter: grayscale(1);"
             onclick="showImage(this, 'empire', true)"
           />
-          <img class="arrow" src="res/right.svg" onclick="showImage(this, 'empire', false)" />
+          <img
+            class="arrow"
+            src="res/right.svg"
+            onclick="showImage(this, 'empire', false)"
+          />
         </div>
         <h1>Improved empire visuals</h1>
         <p>
@@ -237,7 +275,11 @@
     });
 
     document.querySelector("body").addEventListener("keyup", function (event) {
-      if (event.keyCode === 13 || event.keyCode === 32 || event.keyCode === 27) {
+      if (
+        event.keyCode === 13 ||
+        event.keyCode === 32 ||
+        event.keyCode === 27
+      ) {
         document.querySelector(".dialog-overlay").classList.remove("active");
       }
     });
@@ -264,16 +306,20 @@
     function showImage(target, selector, left) {
       if (left) {
         if (index[selector] == 1) {
-          document.querySelector(`.${selector} .arrow`).style.filter = "grayscale(1)";
+          document.querySelector(`.${selector} .arrow`).style.filter =
+            "grayscale(1)";
         }
         if (index[selector] == 0) {
           return;
         }
         index[selector]--;
-        document.querySelector(`.${selector} .arrow:last-child`).style.filter = "none";
+        document.querySelector(`.${selector} .arrow:last-child`).style.filter =
+          "none";
       } else {
         if (index[selector] == SCREENS[selector].length - 2) {
-          document.querySelector(`.${selector} .arrow:last-child`).style.filter = "grayscale(1)";
+          document.querySelector(
+            `.${selector} .arrow:last-child`
+          ).style.filter = "grayscale(1)";
         } else if (index[selector] == SCREENS[selector].length - 1) {
           return;
         }
@@ -281,7 +327,8 @@
         document.querySelector(`.${selector} .arrow`).style.filter = "none";
       }
 
-      document.querySelector(`.${selector} img`).src = "res/" + SCREENS[selector][index[selector]] + ".png";
+      document.querySelector(`.${selector} img`).src =
+        "res/" + SCREENS[selector][index[selector]] + ".png";
     }
   </script>
 </html>
