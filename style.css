@@ -48,6 +48,10 @@ a {
   width: auto;
   max-width: 900px;
 }
+.image img.stats {
+  max-width: 950px;
+  max-height: 511px;
+}
 
 .text-block {
   width: 100%;
